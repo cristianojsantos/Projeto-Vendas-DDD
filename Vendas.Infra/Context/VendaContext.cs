@@ -16,7 +16,6 @@ namespace Vendas.Infra.Context
         public VendaContext()
             :base("Name=VendaContext")
         {
-
         }
 
         public DbSet<Loja> Loja { get; set; }
