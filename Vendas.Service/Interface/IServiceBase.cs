@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Vendas.Infra.Repositor.Interface
+namespace Vendas.Service.Interface
 {
-    public interface IRepositoryBase<TEntity> where TEntity: class
+    public interface IServiceBase<TEntity> where TEntity: class
     {
         void Add(TEntity obj);
         TEntity GetById(int id);

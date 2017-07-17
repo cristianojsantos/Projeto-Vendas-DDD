@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90E3FC52-18ED-460A-BA82-A758E60403DB}</ProjectGuid>
+    <ProjectGuid>{286AAF14-B484-4B47-B61E-B6FFFBF04349}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vendas.Service</RootNamespace>
-    <AssemblyName>Vendas.Service</AssemblyName>
+    <RootNamespace>Vendas.Injection</RootNamespace>
+    <AssemblyName>Vendas.Injection</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -37,37 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Compile Include="CategoriaService.cs" />
-    <Compile Include="ClienteService.cs" />
-    <Compile Include="Interface\ICategoriaService.cs" />
-    <Compile Include="Interface\IClienteService.cs" />
-    <Compile Include="Interface\ILojaService.cs" />
-    <Compile Include="Interface\IProdutoService.cs" />
-    <Compile Include="Interface\IServiceBase.cs" />
-    <Compile Include="Interface\ISubCategoriaService.cs" />
-    <Compile Include="Interface\IVendaItemService.cs" />
-    <Compile Include="Interface\IVendaService.cs" />
-    <Compile Include="Interface\IVendedorService.cs" />
-    <Compile Include="LojaService.cs" />
-    <Compile Include="ProdutoService.cs" />
-    <Compile Include="ServiceBase.cs" />
-    <Compile Include="SubCategoriaService.cs" />
-    <Compile Include="VendaItemService.cs" />
-    <Compile Include="VendaService.cs" />
-    <Compile Include="VendedorService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Vendas.Domain\Vendas.Domain.csproj">
-      <Project>{a90d0bb7-8d3f-498a-a8a1-9381d9d6f59f}</Project>
-      <Name>Vendas.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vendas.Infra\Vendas.Infra.csproj">
-      <Project>{3DC44601-BE0E-4792-B44A-984837B79DEE}</Project>
-      <Name>Vendas.Infra</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

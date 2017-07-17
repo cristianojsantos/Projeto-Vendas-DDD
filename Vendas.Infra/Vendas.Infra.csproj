@@ -50,8 +50,24 @@
     <Compile Include="EntityConfiguration\VendaConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaItemConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendedorConfiguration.cs" />
+    <Compile Include="Repository\CategoriaRepository.cs" />
+    <Compile Include="Repository\ClienteRepository.cs" />
+    <Compile Include="Repository\Interface\IClienteRepository.cs" />
+    <Compile Include="Repository\Interface\ICategoriaRepository.cs" />
     <Compile Include="Repository\Interface\IRepositoryBase.cs" />
+    <Compile Include="Repository\Interface\ILojaRepository.cs" />
+    <Compile Include="Repository\Interface\IProdutoRepository.cs" />
+    <Compile Include="Repository\Interface\ISubCategoriaRepository.cs" />
+    <Compile Include="Repository\Interface\IVendaItemRepository.cs" />
+    <Compile Include="Repository\Interface\IVendaRepository.cs" />
+    <Compile Include="Repository\Interface\IVendedorRepository.cs" />
+    <Compile Include="Repository\LojaRepository.cs" />
+    <Compile Include="Repository\ProdutoRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\SubCategoriaRepository.cs" />
+    <Compile Include="Repository\VendaItemRepository.cs" />
+    <Compile Include="Repository\VendaRepository.cs" />
+    <Compile Include="Repository\VendedorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">

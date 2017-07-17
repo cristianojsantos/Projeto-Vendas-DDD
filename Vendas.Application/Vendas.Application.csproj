@@ -38,6 +38,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoriaApplication.cs" />
+    <Compile Include="ClienteApplication.cs" />
+    <Compile Include="Interface\ICategoriaApplication.cs" />
+    <Compile Include="Interface\IClienteApplication.cs" />
+    <Compile Include="Interface\ILojaApplication.cs" />
+    <Compile Include="Interface\IProdutoApplication.cs" />
+    <Compile Include="Interface\IApplicationBase.cs" />
+    <Compile Include="Interface\ISubCategoriaApplication.cs" />
+    <Compile Include="Interface\IVendaItemApplication.cs" />
+    <Compile Include="Interface\IVendaApplication.cs" />
+    <Compile Include="Interface\IVendedorApplication.cs" />
+    <Compile Include="LojaApplication.cs" />
+    <Compile Include="ProdutoApplication.cs" />
+    <Compile Include="ApplicationBase.cs" />
+    <Compile Include="SubCategoriaApplication.cs" />
+    <Compile Include="VendaItemApplication.cs" />
+    <Compile Include="VendaApplication.cs" />
+    <Compile Include="VendedorApplication.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vendas.Domain\Vendas.Domain.csproj">
+      <Project>{A90D0BB7-8D3F-498A-A8A1-9381D9D6F59F}</Project>
+      <Name>Vendas.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vendas.Service\Vendas.Service.csproj">
+      <Project>{90E3FC52-18ED-460A-BA82-A758E60403DB}</Project>
+      <Name>Vendas.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

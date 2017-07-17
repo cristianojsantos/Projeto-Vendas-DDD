@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Vendas.Infra.Context;
-using Vendas.Infra.Repository.Interface;
+using Vendas.Infra.Repositor.Interface;
 
-namespace Vendas.Infra.Repository
+namespace Vendas.Infra.Repositor
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
@@ -11,47 +12,39 @@ namespace Vendas.Infra.Repository
 
         public void Add(TEntity obj)
         {
-            throw new NotImplementedException();
+            db.Set<TEntity>().Add(obj);
+            db.SaveChanges();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            db.Dispose();
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().ToList();
         }
 
         public IEnumerable<TEntity> GetAllAsNoTracking()
         {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().AsNoTracking().ToList();
         }
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(int id)
-        {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().Find(id);
         }
 
         public void Remove(TEntity obj)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(int id)
-        {
-            throw new NotImplementedException();
+            db.Set<TEntity>().Remove(obj);
         }
 
         public void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            db.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
         }
     }
 }
