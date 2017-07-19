@@ -50,9 +50,6 @@ namespace Vendas.Infra.Context
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasColumnType("varchar"));
-
-            modelBuilder.Properties<DateTime>()
-                .Configure(p => p.HasColumnType("Date"));
         }
     }
 }

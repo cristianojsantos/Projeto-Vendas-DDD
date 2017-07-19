@@ -11,9 +11,15 @@ namespace Vendas.Infra.EntityConfiguration
 
             Property(p => p.NomeVendedor)
                 .IsRequired()
-                .HasMaxLength(100)
-                .HasColumnType("varchar");
+                .HasMaxLength(100);
 
+            Property(p => p.MatriculaVendedor)
+                .IsRequired()
+                .HasMaxLength(15);
+
+            HasRequired(p => p.Loja)
+                .WithMany()
+                .HasForeignKey(p => p.IdLoja);
         }
     }
 }

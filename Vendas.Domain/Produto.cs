@@ -8,5 +8,7 @@
         public int IdCategoria { get; set; }
         public decimal ValorProduto { get; set; }
         public decimal ValorCustoProduto { get; set; }
+
+        public virtual SubCategoria SubCategoria { get; set; }
     }
 }

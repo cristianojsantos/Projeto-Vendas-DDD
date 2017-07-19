@@ -7,7 +7,11 @@ namespace Vendas.Infra.EntityConfiguration
     {
         public CategoriaConfiguration()
         {
+            HasKey(p => p.IdCategoria);
 
+            Property(p => p.DescricaoCategoria)
+                .IsRequired()
+                .HasMaxLength(60);
         }
     }
 }
