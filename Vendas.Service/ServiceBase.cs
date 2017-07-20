@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Vendas.Infra.Repositor.Interface;
+using Vendas.Infra.Repository.Interface;
 using Vendas.Service.Interface;
 
 namespace Vendas.Service

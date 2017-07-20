@@ -6,7 +6,7 @@ using Vendas.Infra.EntityConfiguration;
 
 namespace Vendas.Infra.Context
 {
-    public class VendaContext: DbContext
+    public class VendaContext : DbContext
     {
         static VendaContext()
         {
@@ -14,7 +14,7 @@ namespace Vendas.Infra.Context
         }
 
         public VendaContext()
-            :base("Name=VendaContext")
+            : base("Name=VendaContext")
         {
         }
 
@@ -26,6 +26,9 @@ namespace Vendas.Infra.Context
         public DbSet<Venda> Venda { get; set; }
         public DbSet<VendaItem> VendaItem { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Perfil> Perfil { get; set; }
+        public DbSet<PerfilUsuario> PerfilUsuario { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

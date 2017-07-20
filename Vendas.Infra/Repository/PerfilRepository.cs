@@ -3,7 +3,7 @@ using Vendas.Infra.Repository.Interface;
 
 namespace Vendas.Infra.Repository
 {
-    public class VendaItemRepository: RepositoryBase<VendaItem>, IVendaItemRepository
+    public class PerfilRepository: RepositoryBase<Perfil>, IPerfilRepository
     {
     }
 }

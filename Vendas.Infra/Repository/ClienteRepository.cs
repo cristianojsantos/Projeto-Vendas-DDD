@@ -1,7 +1,7 @@
 ﻿using Vendas.Domain;
-using Vendas.Infra.Repositor.Interface;
+using Vendas.Infra.Repository.Interface;
 
-namespace Vendas.Infra.Repositor
+namespace Vendas.Infra.Repository
 {
     public class ClienteRepository: RepositoryBase<Cliente>, IClienteRepository
     {

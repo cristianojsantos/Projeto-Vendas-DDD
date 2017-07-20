@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Vendas.Infra.Context;
-using Vendas.Infra.Repositor.Interface;
+using Vendas.Infra.Repository.Interface;
 
-namespace Vendas.Infra.Repositor
+namespace Vendas.Infra.Repository
 {
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {

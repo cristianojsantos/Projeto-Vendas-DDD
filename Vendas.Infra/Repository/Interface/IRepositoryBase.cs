@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vendas.Infra.Repositor.Interface
+namespace Vendas.Infra.Repository.Interface
 {
     public interface IRepositoryBase<TEntity> where TEntity: class
     {
