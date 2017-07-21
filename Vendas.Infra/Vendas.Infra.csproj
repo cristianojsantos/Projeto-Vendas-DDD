@@ -45,6 +45,7 @@
     <Compile Include="EntityConfiguration\CategoriaConfiguration.cs" />
     <Compile Include="EntityConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntityConfiguration\LojaConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PerfilUsuarioConfiguration.cs" />
     <Compile Include="EntityConfiguration\PerfilConfiguration.cs" />
     <Compile Include="EntityConfiguration\ProdutoConfiguration.cs" />
     <Compile Include="EntityConfiguration\SubCategoriaConfiguration.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="EntityConfiguration\VendaConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaItemConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendedorConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\CategoriaRepository.cs" />
     <Compile Include="Repository\ClienteRepository.cs" />
     <Compile Include="Repository\Interface\IClienteRepository.cs" />

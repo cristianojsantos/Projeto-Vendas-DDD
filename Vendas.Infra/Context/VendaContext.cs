@@ -46,6 +46,9 @@ namespace Vendas.Infra.Context
             modelBuilder.Configurations.Add(new VendaConfiguration());
             modelBuilder.Configurations.Add(new VendaItemConfiguration());
             modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new PerfilConfiguration());
+            modelBuilder.Configurations.Add(new PerfilUsuarioConfiguration());
+            modelBuilder.Configurations.Add(new UsuarioConfiguration());
 
             modelBuilder.Properties()
                 .Where(p => p.Name == p.ReflectedType.Name + "Id")
