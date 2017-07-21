@@ -60,7 +60,7 @@
     <Compile Include="ProdutoService.cs" />
     <Compile Include="ServiceBase.cs" />
     <Compile Include="SubCategoriaService.cs" />
-    <Compile Include="UsuarioRepository.cs" />
+    <Compile Include="UsuarioService.cs" />
     <Compile Include="VendaItemService.cs" />
     <Compile Include="VendaService.cs" />
     <Compile Include="VendedorService.cs" />

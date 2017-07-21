@@ -3,15 +3,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
-    public class CategoriaViewModel
+    public class PerfilViewModel
     {
         [Key]
-        public int IdCategoria { get; set; }
+        public int IdPefil { get; set; }
 
-        [DisplayName("Descrição da Categoria")]
+        [DisplayName()]
         [MaxLength(30)]
         [MinLength(3)]
         [Required]
-        public string DescricaoCategoria { get; set; }
+        public string DescricaoPerfil { get; set; }
     }
 }

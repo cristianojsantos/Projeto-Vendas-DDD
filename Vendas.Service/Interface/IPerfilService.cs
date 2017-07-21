@@ -1,9 +1,9 @@
 ﻿using Vendas.Domain;
 using Vendas.Infra.Repository.Interface;
 
-namespace Vendas.Infra.Repository.Interface
+namespace Vendas.Service.Interface
 {
-    public interface IPerfilService: IRepositoryBase<Perfil>
+    public interface IPerfilService: IServiceBase<Perfil>
     {
     }
 }

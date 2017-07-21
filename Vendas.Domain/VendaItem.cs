@@ -9,5 +9,8 @@
         public int IdCliente { get; set; }
         public int IdProduto { get; set; }
         public decimal ValorVenda { get; set; }
+
+        public virtual Venda Venda { get; set; }
+        public virtual Produto Produto { get; set; }
     }
 }

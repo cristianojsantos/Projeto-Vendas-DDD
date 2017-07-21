@@ -16,6 +16,9 @@ namespace Vendas.Presentation.Web.AutoMapper
             CreateMap<VendaItemViewModel, VendaItem>();
             CreateMap<VendaViewModel, Venda>();
             CreateMap<VendedorViewModel, Vendedor>();
+            CreateMap<PerfilViewModel, Perfil>();
+            CreateMap<PerfilUsuarioViewModel, PerfilUsuario>();
+            CreateMap<UsuarioViewModel, PerfilUsuario>();
         }
     }
 }

@@ -37,6 +37,31 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InjectionModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vendas.Application\Vendas.Application.csproj">
+      <Project>{f9448010-b663-4f7c-b25b-ce79b636c87f}</Project>
+      <Name>Vendas.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vendas.Infra\Vendas.Infra.csproj">
+      <Project>{3dc44601-be0e-4792-b44a-984837b79dee}</Project>
+      <Name>Vendas.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vendas.Service\Vendas.Service.csproj">
+      <Project>{90e3fc52-18ed-460a-ba82-a758e60403db}</Project>
+      <Name>Vendas.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

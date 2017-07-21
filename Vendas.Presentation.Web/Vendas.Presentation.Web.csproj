@@ -122,7 +122,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -132,15 +150,18 @@
     <Compile Include="AutoMapper\AutoMapperConfig.cs" />
     <Compile Include="AutoMapper\DomainToViewModelMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainMappingProfile.cs" />
-    <Compile Include="Controllers\LojaController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CategoriaViewModel.cs" />
     <Compile Include="ViewModels\ClienteViewModel.cs" />
     <Compile Include="ViewModels\LojaViewModel.cs" />
+    <Compile Include="ViewModels\PerfilViewModel.cs" />
+    <Compile Include="ViewModels\PerfilUsuarioViewModel.cs" />
     <Compile Include="ViewModels\ProdutoViewModel.cs" />
     <Compile Include="ViewModels\SubCategoriaViewModel.cs" />
+    <Compile Include="ViewModels\UsuarioViewModel.cs" />
     <Compile Include="ViewModels\VendaViewModel.cs" />
     <Compile Include="ViewModels\VendaItemViewModel.cs" />
     <Compile Include="ViewModels\VendedorViewModel.cs" />
@@ -149,6 +170,11 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_LayoutCodelinQ.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -158,12 +184,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Loja\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vendas.Application\Vendas.Application.csproj">
+      <Project>{F9448010-B663-4F7C-B25B-CE79B636C87F}</Project>
+      <Name>Vendas.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vendas.Domain\Vendas.Domain.csproj">
       <Project>{A90D0BB7-8D3F-498A-A8A1-9381D9D6F59F}</Project>
       <Name>Vendas.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vendas.Injection\Vendas.Injection.csproj">
+      <Project>{286aaf14-b484-4b47-b61e-b6fffbf04349}</Project>
+      <Name>Vendas.Injection</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -42,7 +42,7 @@ namespace Vendas.Infra.EntityConfiguration
                 .IsOptional();
 
             Property(p => p.Bairro)
-                .HasMaxLength(14)
+                .HasMaxLength(60)
                 .IsRequired();
 
             Property(p => p.Cidade)

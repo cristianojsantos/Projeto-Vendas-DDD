@@ -44,16 +44,22 @@
     <Compile Include="Interface\ICategoriaApplication.cs" />
     <Compile Include="Interface\IClienteApplication.cs" />
     <Compile Include="Interface\ILojaApplication.cs" />
+    <Compile Include="Interface\IPerfilApplication.cs" />
+    <Compile Include="Interface\IPerfilUsuarioApplication.cs" />
     <Compile Include="Interface\IProdutoApplication.cs" />
     <Compile Include="Interface\IApplicationBase.cs" />
     <Compile Include="Interface\ISubCategoriaApplication.cs" />
+    <Compile Include="Interface\IUsuarioApplication.cs" />
     <Compile Include="Interface\IVendaItemApplication.cs" />
     <Compile Include="Interface\IVendaApplication.cs" />
     <Compile Include="Interface\IVendedorApplication.cs" />
+    <Compile Include="PerfilApplication.cs" />
     <Compile Include="LojaApplication.cs" />
+    <Compile Include="PerfilUsuarioApplication.cs" />
     <Compile Include="ProdutoApplication.cs" />
     <Compile Include="ApplicationBase.cs" />
     <Compile Include="SubCategoriaApplication.cs" />
+    <Compile Include="UsuarioApplication.cs" />
     <Compile Include="VendaItemApplication.cs" />
     <Compile Include="VendaApplication.cs" />
     <Compile Include="VendedorApplication.cs" />
@@ -67,6 +73,9 @@
       <Project>{90E3FC52-18ED-460A-BA82-A758E60403DB}</Project>
       <Name>Vendas.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
