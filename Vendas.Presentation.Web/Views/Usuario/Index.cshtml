@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Vendas.Presentation.Web.ViewModels.UsuarioViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutCodelinQ.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SenhaUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SenhaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdUsuario })
+        </td>
+    </tr>
+}
+
+</table>

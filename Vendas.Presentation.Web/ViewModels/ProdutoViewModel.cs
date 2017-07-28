@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vendas.Presentation.Web.ViewModels
@@ -26,6 +27,19 @@ namespace Vendas.Presentation.Web.ViewModels
         [DataType(DataType.Currency)]
         public decimal ValorCustoProduto { get; set; }
 
+        public int IdUsuarioCadastro { get; set; }
+
+        [DisplayName("Data Cadastro")]
+        public DateTime DataCadastro { get; set; }
+        public int IdUsuarioAlteracao { get; set; }
+
+        [DisplayName("Data Cadastro")]
+        public DateTime DataAlteracao { get; set; }
+
+        public virtual UsuarioViewModel UsuarioCadastro { get; set; }
+        public virtual UsuarioViewModel UsuarioAlteracao { get; set; }
+
         public virtual SubCategoriaViewModel SubCategoria { get; set; }
+
     }
 }

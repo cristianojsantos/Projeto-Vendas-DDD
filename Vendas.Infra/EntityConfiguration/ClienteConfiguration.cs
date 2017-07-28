@@ -52,6 +52,24 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.Estado)
                 .HasMaxLength(30)
                 .IsRequired();
+
+            Property(p => p.IdUsuarioCadastro)
+                .IsRequired();
+
+            Property(p => p.DataCadastro)
+                .IsRequired();
+
+            Property(p => p.IdUsuarioAlteracao);
+
+            Property(p => p.DataAlteracao);
+
+            HasRequired(p => p.UsuarioCadastro)
+                .WithMany()
+                .HasForeignKey(p => p.IdUsuarioCadastro);
+
+            HasRequired(p => p.UsuarioAlteracao)
+                .WithMany()
+                .HasForeignKey(p => p.IdUsuarioAlteracao);
         }
     }
 }

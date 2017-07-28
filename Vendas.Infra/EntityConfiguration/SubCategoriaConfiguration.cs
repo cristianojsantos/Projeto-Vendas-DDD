@@ -16,6 +16,19 @@ namespace Vendas.Infra.EntityConfiguration
             HasRequired(p => p.Categoria)
                 .WithMany()
                 .HasForeignKey(p => p.IdCategoria);
+
+            Property(p => p.DataCadastro)
+                .IsRequired();
+
+            Property(p => p.DataAlteracao);
+
+            HasRequired(p => p.UsuarioCadastro)
+                .WithMany()
+                .HasForeignKey(p => p.IdUsuarioCadastro);
+
+            HasOptional(p => p.UsuarioAlteracao)
+                .WithMany()
+                .HasForeignKey(p => p.IdUsuarioAlteracao);
         }
     }
 }

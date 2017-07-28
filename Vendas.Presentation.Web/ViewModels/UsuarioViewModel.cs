@@ -14,6 +14,12 @@ namespace Vendas.Presentation.Web.ViewModels
         [Required]
         public string NomeUsuario { get; set; }
 
+        [DisplayName("Login do Usuário")]
+        [MaxLength(20)]
+        [MinLength(3)]
+        [Required]
+        public string LoginUsuario { get; set; }
+
         [DisplayName("Senha do Usuário")]
         [MaxLength(100)]
         [MinLength(5)]

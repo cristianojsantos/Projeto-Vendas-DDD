@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Vendas.Domain;
 using Vendas.Infra.EntityConfiguration;
@@ -34,9 +33,9 @@ namespace Vendas.Infra.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Conventions.Add<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Add<ManyToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Add<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             modelBuilder.Configurations.Add(new LojaConfiguration());
             modelBuilder.Configurations.Add(new VendedorConfiguration());
