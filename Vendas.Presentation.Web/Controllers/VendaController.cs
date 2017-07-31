@@ -1,60 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
-using Vendas.Presentation.Web.ViewModels;
 
 namespace Vendas.Presentation.Web.Controllers
 {
-    public class UsuarioController : Controller
+    public class VendaController : Controller
     {
-        public ActionResult Login()
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken()]
-        public ActionResult Login(UsuarioViewModel obj)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-            return View();
-        }
-
-        // GET: Usuario
+        // GET: Venda
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Usuario/Details/5
+
+
+        // GET: Venda/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Usuario/Create
+        // GET: Venda/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
+        // POST: Venda/Create
         [HttpPost]
-        public ActionResult Create(UsuarioViewModel obj)
+        public ActionResult Create(FormCollection collection)
         {
             try
             {
@@ -68,37 +44,13 @@ namespace Vendas.Presentation.Web.Controllers
             }
         }
 
-        public ActionResult NewUser()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult NewUser(UsuarioViewModel obj)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    return View();
-                }
-                else
-                    return View();
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-        }
-
-        // GET: Usuario/Edit/5
+        // GET: Venda/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Usuario/Edit/5
+        // POST: Venda/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -114,13 +66,13 @@ namespace Vendas.Presentation.Web.Controllers
             }
         }
 
-        // GET: Usuario/Delete/5
+        // GET: Venda/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Usuario/Delete/5
+        // POST: Venda/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

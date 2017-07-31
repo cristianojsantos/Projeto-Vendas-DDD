@@ -8,19 +8,19 @@ namespace Vendas.Presentation.Web.ViewModels
         [Key]
         public int IdUsuario { get; set; }
 
-        [DisplayName("Nome do Usuário")]
+        [DisplayName("Nome do Usuario")]
         [MaxLength(100)]
         [MinLength(5)]
         [Required]
         public string NomeUsuario { get; set; }
 
-        [DisplayName("Login do Usuário")]
+        [DisplayName("Login do Usuario")]
         [MaxLength(20)]
         [MinLength(3)]
         [Required]
         public string LoginUsuario { get; set; }
 
-        [DisplayName("Senha do Usuário")]
+        [DisplayName("Senha do Usuario")]
         [MaxLength(100)]
         [MinLength(5)]
         [Required]
@@ -31,7 +31,7 @@ namespace Vendas.Presentation.Web.ViewModels
         [MaxLength(100)]
         [MinLength(5)]
         [Required]
-        [DataType(DataType.Password)]
+        [DataType(DataType.EmailAddress)]
         public string EmailUsuario { get; set; }
     }
 }
