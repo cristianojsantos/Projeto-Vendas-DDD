@@ -992,6 +992,11 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dist\js\app.js" />
+    <Content Include="Scripts\dist\js\app.min.js" />
+    <Content Include="Scripts\dist\js\demo.js" />
+    <Content Include="Scripts\dist\js\pages\dashboard.js" />
+    <Content Include="Scripts\dist\js\pages\dashboard2.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -1052,7 +1057,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\dist\css\" />
     <Folder Include="Content\dist\img\credit\" />
-    <Folder Include="Scripts\dist\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vendas.Application\Vendas.Application.csproj">
