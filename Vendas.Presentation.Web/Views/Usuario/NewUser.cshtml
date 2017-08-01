@@ -5,63 +5,99 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>NewUser</title>
-</head>
-<body>
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
-        <div class="form-horizontal">
-            <h4>UsuarioViewModel</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.NomeUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.NomeUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.NomeUsuario, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.LoginUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.LoginUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.LoginUsuario, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.SenhaUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.SenhaUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SenhaUsuario, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.EmailUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.EmailUsuario, "", new { @class = "text-danger" })
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>
+    @{
+        ViewBag.Title = "Login";
     }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/AdminLTE.min.css" />
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/Content/plugins/iCheck/square/blue.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <b>LinQ</b> Sistemas
+        </div>
+        <div class="register-box-body">
+            <p class="login-box-msg">Inserir novo Usuário</p>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group has-feedback">
+                        @Html.EditorFor(model => model.NomeUsuario, new { htmlAttributes = new { @class = "form-control" , @placeholder = Html.DisplayNameFor(p => p.NomeUsuario) }  })
+                        <span class="glyphicon glyphicon-eye-open form-control-feedback"></span>
+                        @Html.ValidationMessageFor(model => model.NomeUsuario, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        @Html.EditorFor(model => model.LoginUsuario, new { htmlAttributes = new { @class = "form-control" , @placeholder = Html.DisplayNameFor(p => p.LoginUsuario) } })
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        @Html.ValidationMessageFor(model => model.LoginUsuario, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        @Html.EditorFor(model => model.SenhaUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(p => p.SenhaUsuario) } })
+                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                        @Html.ValidationMessageFor(model => model.SenhaUsuario, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        @Html.EditorFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(p => p.EmailUsuario) } })
+                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        @Html.ValidationMessageFor(model => model.EmailUsuario, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="submit" value="Inserir" class="btn btn-primary btn-block btn-flat" />
+                        </div>
+                    </div>
+                </div>
+            }            
+        </div>
+        <!-- /.form-box -->
     </div>
+    <!-- /.register-box -->
+    <!-- jQuery 2.2.3 -->
+    <script src="~/Content/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="~/Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Content/plugins/iCheck/icheck.min.js"></script>
+    <script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+    </script>
 </body>
 </html>
+
+
+ 

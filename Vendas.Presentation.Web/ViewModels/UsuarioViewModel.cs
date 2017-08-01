@@ -27,7 +27,7 @@ namespace Vendas.Presentation.Web.ViewModels
         [DataType(DataType.Password)]
         public string SenhaUsuario { get; set; }
 
-        [DisplayName("E-mail do Usuário")]
+        [DisplayName("E-mail do Usuario")]
         [MaxLength(100)]
         [MinLength(5)]
         [Required]

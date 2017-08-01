@@ -3,9 +3,8 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;width:auto">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +44,7 @@
             <header class="main-header">
                 <a href="#" class="logo">
                     <span class="logo-mini"><b>L</b>inQ Sistemas</span>
-                    <span class="logo-lg"><b>Admin</b>LinQ</span>
+                    <span class="logo-lg"><b>Admin</b> LinQ</span>
                 </a>
 
                 <nav class="navbar navbar-static-top">
@@ -71,8 +70,9 @@
                 <section class="sidebar">
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="#" class="img-circle" alt="User Image">             
+                            <img src="~/Content/img/Eu.jpg" class="img-circle" alt="User Image">
                         </div>
+                        <br />
                         <div class="pull-left info">
                             <p>@Html.LabelFor(p => p.NomeUsuario)</p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
@@ -104,7 +104,7 @@
                     @RenderBody()
                     <hr />
                     <footer>
-                        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                        <p>&copy; @DateTime.Now.Year - CodelinQ Sistemas</p>
                     </footer>
                 </div>
             </div>
@@ -112,13 +112,13 @@
 
         <div class="control-sidebar-bg"></div>
     </div>
-    
+
     <script src="~/Content/plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-  $.widget.bridge('uibutton', $.ui.button);
+        $.widget.bridge('uibutton', $.ui.button);
     </script>
     <!-- Bootstrap 3.3.6 -->
     <script src="~/Scripts/bootstrap.min.js"></script>
@@ -148,6 +148,6 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Scripts/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="~/Scripts/dist/js/demo.js"></script>            
+    <script src="~/Scripts/dist/js/demo.js"></script>
 </body>
 </html>
