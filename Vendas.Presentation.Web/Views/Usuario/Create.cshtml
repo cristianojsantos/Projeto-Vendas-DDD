@@ -2,14 +2,13 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutCodelinQ.cshtml";
-    
+    Layout = "~/Views/Shared/_LayoutCodelinQ.cshtml";    
 }
 
 <section class="content-header">
     <br />
     <ol class="breadcrumb">
-        <li>@Html.ActionLink("Principal","Index","Venda", new { @class = "fa fa-edit" })</li>
+        <li>@Html.ActionLink("Principal","Index","Venda")</li>
         <li>@Html.ActionLink("Usuários", "Index", "Usuario")</li>
         <li>@Html.ActionLink("Inclusão de Usuários", "Create", "Usuario")</li>
     </ol>
@@ -30,7 +29,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        @using (Html.BeginForm())
+                        @using (Html.BeginForm(new { @class = "sidebar-form" }))
                         {
                             @Html.AntiForgeryToken()
 
