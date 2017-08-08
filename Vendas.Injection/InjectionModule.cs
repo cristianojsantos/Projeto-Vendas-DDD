@@ -21,6 +21,7 @@ namespace Vendas.Injection
             Bind<IVendaApplication>().To<VendaApplication>();
             Bind<IVendaItemApplication>().To<VendaItemApplication>();
             Bind<IClienteApplication>().To<ClienteApplication>();
+            Bind<IUsuarioApplication>().To<UsuarioApplication>();
 
             Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
             Bind<ICategoriaService>().To<CategoriaService>();
@@ -31,6 +32,7 @@ namespace Vendas.Injection
             Bind<IVendaService>().To<VendaService>();
             Bind<IVendaItemService>().To<VendaItemService>();
             Bind<IClienteService>().To<ClienteService>();
+            Bind<IUsuarioService>().To<UsuarioService>();
 
             Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             Bind<ICategoriaRepository>().To<CategoriaRepository>();
@@ -40,7 +42,7 @@ namespace Vendas.Injection
             Bind<IVendedorRepository>().To<VendedorRepository>();
             Bind<IVendaRepository>().To<VendaRepository>();
             Bind<IVendaItemRepository>().To<VendaItemRepository>();
-            Bind<IClienteRepository>().To<ClienteRepository>();
+            Bind<IUsuarioRepository>().To<UsuarioRepository>();
         }
     }
 }

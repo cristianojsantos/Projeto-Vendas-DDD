@@ -1,11 +1,21 @@
 ﻿using System;
 using System.Web.Mvc;
+using Vendas.Application;
 using Vendas.Presentation.Web.ViewModels;
+using AutoMapper;
+using Vendas.Domain;
 
 namespace Vendas.Presentation.Web.Controllers
 {
     public class UsuarioController : Controller
     {
+        private readonly UsuarioApplication _usuarioApplication;
+
+        public UsuarioController(UsuarioApplication usuarioApplication)            
+        {
+            _usuarioApplication = usuarioApplication;
+        }
+
         public ActionResult Login()
         {
             try
@@ -59,6 +69,8 @@ namespace Vendas.Presentation.Web.Controllers
             try
             {
                 // TODO: Add insert logic here
+                var _usuarioDomain = Mapper.Map<UsuarioViewModel, Usuario>(obj);
+                _usuarioApplication.Add(_usuarioDomain);
 
                 return RedirectToAction("Index");
             }
