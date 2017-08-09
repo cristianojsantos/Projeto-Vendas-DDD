@@ -2,9 +2,9 @@
 
 namespace Vendas.Domain
 {
-    public class Cliente
+    public class PessoaFisica
     {
-        public int IdCliente { get; set; }
+        public int IdPessoaFisica { get; set; }
         public string NomeCliente { get; set; }
         public string Cpf { get; set; }
         public string Rg { get; set; }
@@ -17,12 +17,12 @@ namespace Vendas.Domain
         public string Cidade { get; set; }
         public string Estado { get; set; }
 
-        public int IdUsuarioCadastro { get; set; }
+        public int IdPessoaUsuarioCadastro { get; set; }
         public DateTime DataCadastro { get; set; }
-        public int IdUsuarioAlteracao { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        public int? IdPessoaUsuarioAlteracao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
 
-        public virtual Usuario UsuarioCadastro { get; set; }
-        public virtual Usuario UsuarioAlteracao { get; set; }
+        public virtual PessoaUsuario UsuarioCadastro { get; set; }
+        public virtual PessoaUsuario UsuarioAlteracao { get; set; }
     }
 }

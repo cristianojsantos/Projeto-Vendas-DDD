@@ -13,23 +13,21 @@ namespace Vendas.Infra.EntityConfiguration
                 .IsRequired()
                 .HasMaxLength(60);
 
-            Property(p => p.IdUsuarioCadastro)
+            Property(p => p.IdPessoaUsuarioCadastro)
                 .IsRequired();
 
             Property(p => p.DataCadastro)
                 .IsRequired();
-
-            Property(p => p.IdUsuarioAlteracao);
-
+            
             Property(p => p.DataAlteracao);
 
             HasRequired(p => p.UsuarioCadastro)
                 .WithMany()
-                .HasForeignKey(p => p.IdUsuarioCadastro);
+                .HasForeignKey(p => p.IdPessoaUsuarioCadastro);
 
-            HasRequired(p => p.UsuarioAlteracao)
-                .WithMany()
-                .HasForeignKey(p => p.IdUsuarioAlteracao);
+            HasOptional(p => p.UsuarioAlteracao)
+                .WithMany(p => p.Categoria)
+                .HasForeignKey(p => p.IdPessoaUsuarioAlteracao);
 
         }
     }

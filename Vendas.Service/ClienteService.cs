@@ -4,7 +4,7 @@ using Vendas.Service.Interface;
 
 namespace Vendas.Service
 {
-    public class ClienteService : ServiceBase<Cliente>, IClienteService
+    public class ClienteService : ServiceBase<PessoaFisica>, IClienteService
     {
         private readonly IClienteRepository _clienteRepository;
 

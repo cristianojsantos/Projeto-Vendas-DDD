@@ -27,7 +27,7 @@ namespace Vendas.Infra.EntityConfiguration
                 .HasForeignKey(p => p.IdUsuarioCadastro);
 
             HasOptional(p => p.UsuarioAlteracao)
-                .WithMany()
+                .WithMany(p => p.SubCategoria)
                 .HasForeignKey(p => p.IdUsuarioAlteracao);
         }
     }

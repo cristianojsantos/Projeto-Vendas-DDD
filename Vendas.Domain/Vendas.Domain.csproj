@@ -40,13 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="PessoaJuridica.cs" />
+    <Compile Include="PessoaFisica.cs" />
     <Compile Include="Loja.cs" />
     <Compile Include="Perfil.cs" />
-    <Compile Include="PerfilUsuario.cs" />
+    <Compile Include="PerfilPessoaUsuario.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="SubCategoria.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="PessoaUsuario.cs" />
     <Compile Include="Venda.cs" />
     <Compile Include="VendaItem.cs" />
     <Compile Include="Vendedor.cs" />

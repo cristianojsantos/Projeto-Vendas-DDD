@@ -21,13 +21,13 @@ namespace Vendas.Infra.EntityConfiguration
                 .WithMany()
                 .HasForeignKey(p => p.IdLoja);
 
-            Property(p => p.IdUsuarioCadastro)
-                .IsRequired();
+            /*Property(p => p.IdUsuarioCadastro)
+                .IsRequired();*/
 
             Property(p => p.DataCadastro)
                 .IsRequired();
 
-            Property(p => p.IdUsuarioAlteracao);
+            //Property(p => p.IdUsuarioAlteracao);
 
             Property(p => p.DataAlteracao);
 
@@ -36,7 +36,7 @@ namespace Vendas.Infra.EntityConfiguration
                 .HasForeignKey(p => p.IdUsuarioCadastro);
 
             HasOptional(p => p.UsuarioAlteracao)
-                .WithMany()
+                .WithMany(p => p.Vendedor)
                 .HasForeignKey(p => p.IdUsuarioAlteracao);
         }
     }

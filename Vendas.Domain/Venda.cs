@@ -6,11 +6,11 @@ namespace Vendas.Domain
     {
         public int IdVenda { get; set; }
         public int IdLoja { get; set; }
-        public int IdVendedor { get; set; }
-        public int IdCliente { get; set; }
+        public int IdPessoaVendedor { get; set; }
+        public int IdPessoa { get; set; }
         public DateTime DataVenda { get; set; }
 
-        public virtual Vendedor Vendedor { get; set; }
-        public virtual Cliente Cliente { get; set; }
+        public virtual PessoaVendedor Vendedor { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
     }
 }

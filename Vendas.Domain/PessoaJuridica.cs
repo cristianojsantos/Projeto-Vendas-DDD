@@ -2,10 +2,14 @@
 
 namespace Vendas.Domain
 {
-    public class Loja
+    public class PessoaJuridica
     {
-        public int IdLoja { get; set; }
-        public string NomeLoja { get; set; }
+        public int IdPessoaJuridica { get; set; }
+        public string NomeCliente { get; set; }
+        public string Cnpj { get; set; }
+        public string InscricaoEstadual { get; set; }
+        public string InscricaoMunicipal { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string Endereco { get; set; }
         public string Cep { get; set; }
         public string Complemento { get; set; }

@@ -3,11 +3,11 @@ using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
 {
-    public class ClienteConfiguration: EntityTypeConfiguration<Cliente>
+    public class ClienteConfiguration: EntityTypeConfiguration<PessoaFisica>
     {
         public ClienteConfiguration()
         {
-            HasKey(p => p.IdCliente);
+            HasKey(p => p.IdPessoaFisica);
 
             Property(p => p.NomeCliente)
                 .HasMaxLength(100)
@@ -52,24 +52,19 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.Estado)
                 .HasMaxLength(30)
                 .IsRequired();
-
-            Property(p => p.IdUsuarioCadastro)
-                .IsRequired();
-
+                        
             Property(p => p.DataCadastro)
                 .IsRequired();
-
-            Property(p => p.IdUsuarioAlteracao);
-
+                        
             Property(p => p.DataAlteracao);
 
             HasRequired(p => p.UsuarioCadastro)
                 .WithMany()
-                .HasForeignKey(p => p.IdUsuarioCadastro);
+                .HasForeignKey(p => p.IdPessoaUsuarioCadastro);
 
-            HasRequired(p => p.UsuarioAlteracao)
-                .WithMany()
-                .HasForeignKey(p => p.IdUsuarioAlteracao);
+            HasOptional(p => p.UsuarioAlteracao)
+                .WithMany(p => p.PessoaFisica)
+                .HasForeignKey(p => p.IdPessoaUsuarioAlteracao);
         }
     }
 }
