@@ -3,9 +3,9 @@ using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
 {
-    public class ClienteConfiguration: EntityTypeConfiguration<PessoaFisica>
+    public class PessoaFisicaConfiguration: EntityTypeConfiguration<PessoaFisica>
     {
-        public ClienteConfiguration()
+        public PessoaFisicaConfiguration()
         {
             HasKey(p => p.IdPessoaFisica);
 

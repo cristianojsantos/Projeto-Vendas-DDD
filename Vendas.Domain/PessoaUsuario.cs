@@ -10,6 +10,7 @@ namespace Vendas.Domain
             SubCategoria = new List<SubCategoria>();
             Categoria = new List<Categoria>();
             PessoaFisica = new List<PessoaFisica>();
+            Loja = new List<Loja>();
         }
 
         public int IdPessoaUsuario { get; set; }
@@ -22,5 +23,6 @@ namespace Vendas.Domain
         public virtual ICollection<SubCategoria> SubCategoria { get; set; }
         public virtual ICollection<Categoria> Categoria { get; set; }
         public virtual ICollection<PessoaFisica> PessoaFisica { get; set; }
+        public virtual ICollection<Loja> Loja { get; set; }
     }
 }

@@ -43,13 +43,14 @@
   <ItemGroup>
     <Compile Include="Context\VendaContext.cs" />
     <Compile Include="EntityConfiguration\CategoriaConfiguration.cs" />
-    <Compile Include="EntityConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PessoaFisicaConfiguration.cs" />
     <Compile Include="EntityConfiguration\LojaConfiguration.cs" />
     <Compile Include="EntityConfiguration\PerfilUsuarioConfiguration.cs" />
     <Compile Include="EntityConfiguration\PerfilConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PessoaConfiguration.cs" />
     <Compile Include="EntityConfiguration\ProdutoConfiguration.cs" />
     <Compile Include="EntityConfiguration\SubCategoriaConfiguration.cs" />
-    <Compile Include="EntityConfiguration\UsuarioConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PessoaUsuarioConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaItemConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendedorConfiguration.cs" />

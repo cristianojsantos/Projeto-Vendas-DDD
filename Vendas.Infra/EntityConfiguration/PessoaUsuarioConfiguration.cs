@@ -3,11 +3,11 @@ using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
 {
-    public class UsuarioConfiguration: EntityTypeConfiguration<Usuario>
+    public class PessoaUsuarioConfiguration: EntityTypeConfiguration<PessoaUsuario>
     {
-        public UsuarioConfiguration()
+        public PessoaUsuarioConfiguration()
         {
-            HasKey(p => p.IdUsuario);
+            HasKey(p => p.IdPessoaUsuario);
 
             Property(p => p.NomeUsuario)
                 .IsRequired()
