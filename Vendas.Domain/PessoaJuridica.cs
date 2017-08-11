@@ -9,7 +9,7 @@ namespace Vendas.Domain
         public string Cnpj { get; set; }
         public string InscricaoEstadual { get; set; }
         public string InscricaoMunicipal { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public DateTime DataFundacao { get; set; }
         public string Endereco { get; set; }
         public string Cep { get; set; }
         public string Complemento { get; set; }

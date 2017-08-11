@@ -5,7 +5,7 @@
         public int SequenciaItem { get; set; }
         public int IdVenda { get; set; }
         public int IdLoja { get; set; }
-        public int IdPessoaVendedor { get; set; }        
+        public int IdPessoaUsuario { get; set; }        
         public int IdPessoa { get; set; }
         public int IdProduto { get; set; }
         public decimal ValorVenda { get; set; }

@@ -49,9 +49,9 @@
     <Compile Include="Produto.cs" />
     <Compile Include="SubCategoria.cs" />
     <Compile Include="PessoaUsuario.cs" />
+    <Compile Include="TipoContato.cs" />
     <Compile Include="Venda.cs" />
     <Compile Include="VendaItem.cs" />
-    <Compile Include="Vendedor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -6,9 +6,9 @@ namespace Vendas.Service
 {
     public class UsuarioService: ServiceBase<Usuario>, IUsuarioService
     {
-        private readonly IUsuarioRepository _repository;
+        private readonly IPessoaUsuarioRepository _repository;
 
-        public UsuarioService(IUsuarioRepository repository)
+        public UsuarioService(IPessoaUsuarioRepository repository)
             :base(repository)
         {
             _repository = repository;

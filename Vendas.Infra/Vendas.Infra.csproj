@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Context\VendaContext.cs" />
     <Compile Include="EntityConfiguration\CategoriaConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PessoaJuridicaConfiguration.cs" />
     <Compile Include="EntityConfiguration\PessoaFisicaConfiguration.cs" />
     <Compile Include="EntityConfiguration\LojaConfiguration.cs" />
     <Compile Include="EntityConfiguration\PerfilUsuarioConfiguration.cs" />
@@ -65,7 +66,7 @@
     <Compile Include="Repository\Interface\ILojaRepository.cs" />
     <Compile Include="Repository\Interface\IProdutoRepository.cs" />
     <Compile Include="Repository\Interface\ISubCategoriaRepository.cs" />
-    <Compile Include="Repository\Interface\IUsuarioRepository.cs" />
+    <Compile Include="Repository\Interface\IPessoaUsuarioRepository.cs" />
     <Compile Include="Repository\Interface\IVendaItemRepository.cs" />
     <Compile Include="Repository\Interface\IVendaRepository.cs" />
     <Compile Include="Repository\Interface\IVendedorRepository.cs" />
@@ -75,7 +76,7 @@
     <Compile Include="Repository\ProdutoRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
     <Compile Include="Repository\SubCategoriaRepository.cs" />
-    <Compile Include="Repository\UsuarioRepository.cs" />
+    <Compile Include="Repository\PessoaUsuarioRepository.cs" />
     <Compile Include="Repository\VendaItemRepository.cs" />
     <Compile Include="Repository\VendaRepository.cs" />
     <Compile Include="Repository\VendedorRepository.cs" />

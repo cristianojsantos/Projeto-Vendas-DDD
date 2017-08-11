@@ -43,7 +43,7 @@ namespace Vendas.Injection
             Bind<IVendaRepository>().To<VendaRepository>();
             Bind<IVendaItemRepository>().To<VendaItemRepository>();
             Bind<IClienteRepository>().To<ClienteRepository>();
-            Bind<IUsuarioRepository>().To<UsuarioRepository>();
+            Bind<IPessoaUsuarioRepository>().To<PessoaUsuarioRepository>();
         }
     }
 }

@@ -6,7 +6,6 @@ namespace Vendas.Domain
     {
         public PessoaUsuario()
         {
-            Vendedor = new List<PessoaVendedor>();
             SubCategoria = new List<SubCategoria>();
             Categoria = new List<Categoria>();
             PessoaFisica = new List<PessoaFisica>();
@@ -19,7 +18,6 @@ namespace Vendas.Domain
         public string SenhaUsuario { get; set; }
         public string EmailUsuario { get; set; }
 
-        public virtual ICollection<PessoaVendedor> Vendedor { get; set; }
         public virtual ICollection<SubCategoria> SubCategoria { get; set; }
         public virtual ICollection<Categoria> Categoria { get; set; }
         public virtual ICollection<PessoaFisica> PessoaFisica { get; set; }

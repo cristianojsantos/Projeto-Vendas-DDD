@@ -18,16 +18,17 @@ namespace Vendas.Infra.Context
         }
 
         public DbSet<Loja> Loja { get; set; }
-        public DbSet<Vendedor> Vendedor { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<SubCategoria> SubCategoria { get; set; }
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Venda> Venda { get; set; }
         public DbSet<VendaItem> VendaItem { get; set; }
-        public DbSet<PessoaFisica> Cliente { get; set; }
-        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Pessoa> Pessoa { get; set; }
+        public DbSet<PessoaJuridica> PessoaJuridica { get; set; }
+        public DbSet<PessoaFisica> PessoaFisica { get; set; }
+        public DbSet<PessoaUsuario> PessoaUsuario { get; set; }
         public DbSet<Perfil> Perfil { get; set; }
-        public DbSet<PerfilUsuario> PerfilUsuario { get; set; }
+        public DbSet<PerfilPessoaUsuario> PerfilPessoaUsuario { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -47,6 +48,9 @@ namespace Vendas.Infra.Context
             modelBuilder.Configurations.Add(new PessoaFisicaConfiguration());
             modelBuilder.Configurations.Add(new PerfilConfiguration());
             modelBuilder.Configurations.Add(new PerfilUsuarioConfiguration());
+            modelBuilder.Configurations.Add(new PessoaConfiguration());
+            modelBuilder.Configurations.Add(new PessoaFisicaConfiguration());
+            modelBuilder.Configurations.Add(new PessoaJuridicaConfiguration());
             modelBuilder.Configurations.Add(new PessoaUsuarioConfiguration());
 
             modelBuilder.Properties()
