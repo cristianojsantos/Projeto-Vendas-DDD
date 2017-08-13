@@ -54,14 +54,16 @@
     <Compile Include="EntityConfiguration\PessoaUsuarioConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaConfiguration.cs" />
     <Compile Include="EntityConfiguration\VendaItemConfiguration.cs" />
-    <Compile Include="EntityConfiguration\VendedorConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\CategoriaRepository.cs" />
     <Compile Include="Repository\ClienteRepository.cs" />
     <Compile Include="Repository\Interface\IClienteRepository.cs" />
     <Compile Include="Repository\Interface\ICategoriaRepository.cs" />
     <Compile Include="Repository\Interface\IPerfilRepository.cs" />
-    <Compile Include="Repository\Interface\IPerfilUsuarioRepository.cs" />
+    <Compile Include="Repository\Interface\IPerfilPessoaUsuarioRepository.cs" />
+    <Compile Include="Repository\Interface\IPessoaFisicaRepository.cs" />
+    <Compile Include="Repository\Interface\IPessoaJuridicaRepository.cs" />
+    <Compile Include="Repository\Interface\IPessoaRepository.cs" />
     <Compile Include="Repository\Interface\IRepositoryBase.cs" />
     <Compile Include="Repository\Interface\ILojaRepository.cs" />
     <Compile Include="Repository\Interface\IProdutoRepository.cs" />
@@ -69,17 +71,18 @@
     <Compile Include="Repository\Interface\IPessoaUsuarioRepository.cs" />
     <Compile Include="Repository\Interface\IVendaItemRepository.cs" />
     <Compile Include="Repository\Interface\IVendaRepository.cs" />
-    <Compile Include="Repository\Interface\IVendedorRepository.cs" />
     <Compile Include="Repository\LojaRepository.cs" />
     <Compile Include="Repository\PerfilRepository.cs" />
-    <Compile Include="Repository\PerfilUsuarioRepository.cs" />
+    <Compile Include="Repository\PerfilPessoaUsuarioRepository.cs" />
+    <Compile Include="Repository\PessoaFisicaRepository.cs" />
+    <Compile Include="Repository\PessoaJuridicaRepository.cs" />
+    <Compile Include="Repository\PessoaRepository.cs" />
     <Compile Include="Repository\ProdutoRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
     <Compile Include="Repository\SubCategoriaRepository.cs" />
     <Compile Include="Repository\PessoaUsuarioRepository.cs" />
     <Compile Include="Repository\VendaItemRepository.cs" />
     <Compile Include="Repository\VendaRepository.cs" />
-    <Compile Include="Repository\VendedorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">

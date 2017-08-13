@@ -2,7 +2,7 @@
 
 namespace Vendas.Service.Interface
 {
-    public interface IPerfilUsuarioService : IServiceBase<PerfilUsuario>
+    public interface IPessoaJuridicaService: IServiceBase<PessoaJuridica>
     {
     }
 }

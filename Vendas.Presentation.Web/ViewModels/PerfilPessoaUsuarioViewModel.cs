@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
-    public class PerfilUsuarioViewModel
+    public class PerfilPessoaUsuarioViewModel
     {
         [Key]
         [Column(Order = 1)]

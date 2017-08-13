@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Vendas.Domain
+namespace Vendas.Presentation.Web.ViewModels
 {
-    public class PessoaJuridica
+    public class PessoaJuridicaViewModel
     {
         public int IdPessoaJuridica { get; set; }
         public string NomeCliente { get; set; }
@@ -25,8 +25,8 @@ namespace Vendas.Domain
         public int? IdLojaAlteracao { get; set; }
         public DateTime? DataAlteracao { get; set; }
 
-        public virtual Pessoa Pessoa { get; set; }
-        public virtual PessoaUsuario UsuarioCadastro { get; set; }
-        public virtual PessoaUsuario UsuarioAlteracao { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioAlteracao { get; set; }
     }
 }

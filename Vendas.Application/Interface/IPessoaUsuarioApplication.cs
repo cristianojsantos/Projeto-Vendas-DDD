@@ -2,7 +2,7 @@
 
 namespace Vendas.Application.Interface
 {
-    public interface IUsuarioApplication: IApplicationBase<Usuario>
+    public interface IPessoaUsuarioApplication: IApplicationBase<PessoaUsuario>
     {
     }
 }

@@ -46,24 +46,27 @@
     <Compile Include="Interface\IClienteService.cs" />
     <Compile Include="Interface\ILojaService.cs" />
     <Compile Include="Interface\IPerfilService.cs" />
-    <Compile Include="Interface\IPerfilUsuarioService.cs" />
+    <Compile Include="Interface\IPerfilPessoaUsuarioService.cs" />
+    <Compile Include="Interface\IPessoaFisicaService.cs" />
+    <Compile Include="Interface\IPessoaJuridicaService.cs" />
+    <Compile Include="Interface\IPessoaService.cs" />
+    <Compile Include="Interface\IPessoaUsuarioService.cs" />
     <Compile Include="Interface\IProdutoService.cs" />
     <Compile Include="Interface\IServiceBase.cs" />
     <Compile Include="Interface\ISubCategoriaService.cs" />
-    <Compile Include="Interface\IUsuarioService.cs" />
     <Compile Include="Interface\IVendaItemService.cs" />
     <Compile Include="Interface\IVendaService.cs" />
-    <Compile Include="Interface\IVendedorService.cs" />
     <Compile Include="LojaService.cs" />
     <Compile Include="PerfilService.cs" />
-    <Compile Include="PerfilUsuarioService.cs" />
+    <Compile Include="PerfilPessoaUsuarioService.cs" />
+    <Compile Include="PessoaJuridicaService.cs" />
+    <Compile Include="PessoaFisicaService.cs" />
     <Compile Include="ProdutoService.cs" />
     <Compile Include="ServiceBase.cs" />
     <Compile Include="SubCategoriaService.cs" />
-    <Compile Include="UsuarioService.cs" />
+    <Compile Include="PessoaUsuarioService.cs" />
     <Compile Include="VendaItemService.cs" />
     <Compile Include="VendaService.cs" />
-    <Compile Include="VendedorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vendas.Domain\Vendas.Domain.csproj">

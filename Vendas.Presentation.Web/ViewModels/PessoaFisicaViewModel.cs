@@ -1,15 +1,14 @@
 ﻿using System;
 
-namespace Vendas.Domain
+namespace Vendas.Presentation.Web.ViewModels
 {
-    public class PessoaJuridica
+    public class PessoaFisicaViewModel
     {
-        public int IdPessoaJuridica { get; set; }
+        public int IdPessoaFisica { get; set; }
         public string NomeCliente { get; set; }
-        public string Cnpj { get; set; }
-        public string InscricaoEstadual { get; set; }
-        public string InscricaoMunicipal { get; set; }
-        public DateTime DataFundacao { get; set; }
+        public string Cpf { get; set; }
+        public string Rg { get; set; }
+        public DateTime DataNascimento { get; set; }
         public string Endereco { get; set; }
         public string Cep { get; set; }
         public string Complemento { get; set; }
@@ -25,8 +24,8 @@ namespace Vendas.Domain
         public int? IdLojaAlteracao { get; set; }
         public DateTime? DataAlteracao { get; set; }
 
-        public virtual Pessoa Pessoa { get; set; }
-        public virtual PessoaUsuario UsuarioCadastro { get; set; }
-        public virtual PessoaUsuario UsuarioAlteracao { get; set; }
+        public virtual PessoaViewModel Pessoa { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioAlteracao { get; set; }
     }
 }

@@ -4,11 +4,11 @@ using Vendas.Service.Interface;
 
 namespace Vendas.Application
 {
-    public class UsuarioApplication: ApplicationBase<Usuario>, IUsuarioApplication
+    public class PessoaApplication: ApplicationBase<Pessoa>, IPessoaApplication
     {
-        private readonly IUsuarioService _service;
+        private readonly IPessoaService _service;
 
-        public UsuarioApplication(IUsuarioService service)
+        public PessoaApplication(IPessoaService service)
             :base(service)
         {
             _service = service;

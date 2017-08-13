@@ -3,11 +3,11 @@ using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
 {
-    public class PerfilUsuarioConfiguration: EntityTypeConfiguration<PerfilUsuario>
+    public class PerfilUsuarioConfiguration: EntityTypeConfiguration<PerfilPessoaUsuario>
     {
         public PerfilUsuarioConfiguration()
         {
-            HasKey(p => new { p.IdPerfil, p.IdUsuario });
+            HasKey(p => new { p.IdPerfil, p.IdPessoaUsuario });
 
             HasRequired(p => p.Perfil)
                 .WithMany()
@@ -15,7 +15,7 @@ namespace Vendas.Infra.EntityConfiguration
 
             HasRequired(p => p.Usuario)
                 .WithMany()
-                .HasForeignKey(p => p.IdUsuario);
+                .HasForeignKey(p => p.IdPessoaUsuario);
         }
     }
 }

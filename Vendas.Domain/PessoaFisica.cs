@@ -18,10 +18,13 @@ namespace Vendas.Domain
         public string Estado { get; set; }
 
         public int IdPessoaUsuarioCadastro { get; set; }
+        public int IdLojaCadastro { get; set; }
         public DateTime DataCadastro { get; set; }
         public int? IdPessoaUsuarioAlteracao { get; set; }
+        public int? IdLojaAlteracao { get; set; }
         public DateTime? DataAlteracao { get; set; }
 
+        public virtual Pessoa Pessoa { get; set; }
         public virtual PessoaUsuario UsuarioCadastro { get; set; }
         public virtual PessoaUsuario UsuarioAlteracao { get; set; }
     }

@@ -5,7 +5,7 @@ namespace Vendas.Infra.EntityConfiguration
 {
     public class PessoaConfiguration: EntityTypeConfiguration<Pessoa>
     {
-        public PesoaConfiguration()
+        public PessoaConfiguration()
         {
             HasKey(p => p.IdPessoa);
 

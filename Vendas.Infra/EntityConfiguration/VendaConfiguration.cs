@@ -7,14 +7,14 @@ namespace Vendas.Infra.EntityConfiguration
     {
         public VendaConfiguration()
         {
-            HasKey(p => new { p.IdVenda, p.IdLoja, p.IdVendedor, p.IdCliente });
+            HasKey(p => new { p.IdVenda, p.IdLoja, p.IdPessoaUsuario, p.IdPessoa });
 
             Property(p => p.DataVenda)
                 .IsRequired();
 
-            HasRequired(p => p.Vendedor)
+            HasRequired(p => p.PessoaUsuario)
                 .WithMany()
-                .HasForeignKey(p => new { p.IdVendedor, p.IdLoja });
+                .HasForeignKey(p => new { p.IdPessoa, p.IdLoja });
         }
     }
 }

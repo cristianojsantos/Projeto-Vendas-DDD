@@ -15,10 +15,9 @@ namespace Vendas.Presentation.Web.AutoMapper
             CreateMap<SubCategoriaViewModel, SubCategoria>();
             CreateMap<VendaItemViewModel, VendaItem>();
             CreateMap<VendaViewModel, Venda>();
-            CreateMap<VendedorViewModel, Vendedor>();
             CreateMap<PerfilViewModel, Perfil>();
-            CreateMap<PerfilUsuarioViewModel, PerfilUsuario>();
-            CreateMap<UsuarioViewModel, PerfilUsuario>();
+            CreateMap<PerfilPessoaUsuarioViewModel, PerfilPessoaUsuario>();
+            CreateMap<PessoaUsuarioViewModel, PerfilPessoaUsuario>();
         }
     }
 }

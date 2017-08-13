@@ -20,6 +20,10 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.EmailUsuario)
                 .IsRequired()
                 .HasMaxLength(200);
+
+            HasRequired(p => p.Pessoa)
+                .WithMany()
+                .HasForeignKey(p => p.IdPessoaUsuario);
         }
     }
 }

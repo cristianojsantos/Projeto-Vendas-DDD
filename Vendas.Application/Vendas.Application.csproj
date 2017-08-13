@@ -45,24 +45,28 @@
     <Compile Include="Interface\IClienteApplication.cs" />
     <Compile Include="Interface\ILojaApplication.cs" />
     <Compile Include="Interface\IPerfilApplication.cs" />
-    <Compile Include="Interface\IPerfilUsuarioApplication.cs" />
+    <Compile Include="Interface\IPerfilPessoaUsuarioApplication.cs" />
+    <Compile Include="Interface\IPessoaApplication.cs" />
+    <Compile Include="Interface\IPessoaFisicaApplication.cs" />
+    <Compile Include="Interface\IPessoaJuridicaApplication.cs" />
     <Compile Include="Interface\IProdutoApplication.cs" />
     <Compile Include="Interface\IApplicationBase.cs" />
     <Compile Include="Interface\ISubCategoriaApplication.cs" />
-    <Compile Include="Interface\IUsuarioApplication.cs" />
+    <Compile Include="Interface\IPessoaUsuarioApplication.cs" />
     <Compile Include="Interface\IVendaItemApplication.cs" />
     <Compile Include="Interface\IVendaApplication.cs" />
-    <Compile Include="Interface\IVendedorApplication.cs" />
     <Compile Include="PerfilApplication.cs" />
     <Compile Include="LojaApplication.cs" />
-    <Compile Include="PerfilUsuarioApplication.cs" />
+    <Compile Include="PerfilPessoaUsuarioApplication.cs" />
+    <Compile Include="PessoaApplication.cs" />
+    <Compile Include="PessoaFisicaApplication.cs" />
+    <Compile Include="PessoaJuridicaApplication.cs" />
     <Compile Include="ProdutoApplication.cs" />
     <Compile Include="ApplicationBase.cs" />
     <Compile Include="SubCategoriaApplication.cs" />
-    <Compile Include="UsuarioApplication.cs" />
+    <Compile Include="PessoaUsuarioApplication.cs" />
     <Compile Include="VendaItemApplication.cs" />
     <Compile Include="VendaApplication.cs" />
-    <Compile Include="VendedorApplication.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vendas.Domain\Vendas.Domain.csproj">

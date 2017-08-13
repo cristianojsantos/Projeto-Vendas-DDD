@@ -2,7 +2,7 @@
 
 namespace Vendas.Infra.Repository.Interface
 {
-    public interface IVendedorRepository: IRepositoryBase<Vendedor>
+    public interface IPessoaRepository: IRepositoryBase<Pessoa>
     {
     }
 }

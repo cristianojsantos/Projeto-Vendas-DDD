@@ -8,6 +8,8 @@ namespace Vendas.Domain
         public Pessoa()
         {
             PessoaUsuario = new List<PessoaUsuario>();
+            PessoaFisica = new List<PessoaFisica>();
+            PessoaJuridica = new List<PessoaJuridica>();
         }
 
         public int IdPessoa { get; set; }
@@ -15,6 +17,6 @@ namespace Vendas.Domain
 
         public virtual ICollection<PessoaUsuario> PessoaUsuario { get; set; }
         public virtual ICollection<PessoaFisica> PessoaFisica { get; set; }
-
+        public virtual ICollection<PessoaJuridica> PessoaJuridica { get; set; }
     }
 }

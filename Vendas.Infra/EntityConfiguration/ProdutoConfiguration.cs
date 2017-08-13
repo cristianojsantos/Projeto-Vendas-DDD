@@ -1,4 +1,6 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
+using System.Data.Entity.ModelConfiguration;
 using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
@@ -12,6 +14,11 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.DescricaoProduto)
                 .IsRequired()
                 .HasMaxLength(60);
+
+            Property(p => p.CodigoBarras)
+                .IsRequired()
+                .HasMaxLength(30)
+                .HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute()));
 
             Property(p => p.ValorProduto)
                 .IsRequired()
@@ -31,23 +38,18 @@ namespace Vendas.Infra.EntityConfiguration
                 .WithMany()
                 .HasForeignKey(p => new { p.IdSubCategoria, p.IdCategoria });
 
-            Property(p => p.IdUsuarioCadastro)
-                .IsRequired();
-
             Property(p => p.DataCadastro)
                 .IsRequired();
-
-            Property(p => p.IdUsuarioAlteracao);
 
             Property(p => p.DataAlteracao);
 
             HasRequired(p => p.UsuarioCadastro)
                 .WithMany()
-                .HasForeignKey(p => p.IdUsuarioCadastro);
+                .HasForeignKey(p => new { p.IdPessoaUsuarioCadastro, p.IdLojaCadastro });
 
-            HasRequired(p => p.UsuarioAlteracao)
-                .WithMany()
-                .HasForeignKey(p => p.IdUsuarioAlteracao);
+            HasOptional(p => p.UsuarioAlteracao)
+                .WithMany(p => p.Produto)
+                .HasForeignKey(p => new { p.IdPessoaUsuarioAlteracao, p.IdLojaAlteracao });
         }
     }
 }

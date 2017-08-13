@@ -4,11 +4,11 @@ using Vendas.Service.Interface;
 
 namespace Vendas.Service
 {
-    public class VendedorService : ServiceBase<Vendedor>, IVendedorService
+    public class PessoaFisicaService: ServiceBase<PessoaFisica>, IPessoaFisicaService
     {
-        private readonly IVendedorRepository _repository;
+        private readonly IPessoaFisicaRepository _repository;
 
-        public VendedorService(IVendedorRepository repository)
+        public PessoaFisicaService(IPessoaFisicaRepository repository)
             :base(repository)
         {
             _repository = repository;

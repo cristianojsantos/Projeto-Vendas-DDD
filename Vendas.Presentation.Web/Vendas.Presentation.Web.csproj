@@ -1063,13 +1063,16 @@
     <Compile Include="ImageHelper.cs" />
     <Compile Include="ViewModels\LojaViewModel.cs" />
     <Compile Include="ViewModels\PerfilViewModel.cs" />
-    <Compile Include="ViewModels\PerfilUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\PerfilPessoaUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\PessoaViewModel.cs" />
+    <Compile Include="ViewModels\PessoaFisicaViewModel.cs" />
+    <Compile Include="ViewModels\PessoaJuridicaViewModel.cs" />
+    <Compile Include="ViewModels\PessoaUsuarioViewModel.cs" />
     <Compile Include="ViewModels\ProdutoViewModel.cs" />
     <Compile Include="ViewModels\SubCategoriaViewModel.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
     <Compile Include="ViewModels\VendaViewModel.cs" />
     <Compile Include="ViewModels\VendaItemViewModel.cs" />
-    <Compile Include="ViewModels\VendedorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,7 +2,7 @@
 
 namespace Vendas.Application.Interface
 {
-    public interface IVendedorApplication : IApplicationBase<Vendedor>
+    public interface IPessoaFisicaApplication: IApplicationBase<PessoaFisica>
     {
     }
 }

@@ -39,13 +39,11 @@ namespace Vendas.Infra.Context
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             modelBuilder.Configurations.Add(new LojaConfiguration());
-            modelBuilder.Configurations.Add(new VendedorConfiguration());
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
             modelBuilder.Configurations.Add(new SubCategoriaConfiguration());
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
             modelBuilder.Configurations.Add(new VendaConfiguration());
             modelBuilder.Configurations.Add(new VendaItemConfiguration());
-            modelBuilder.Configurations.Add(new PessoaFisicaConfiguration());
             modelBuilder.Configurations.Add(new PerfilConfiguration());
             modelBuilder.Configurations.Add(new PerfilUsuarioConfiguration());
             modelBuilder.Configurations.Add(new PessoaConfiguration());

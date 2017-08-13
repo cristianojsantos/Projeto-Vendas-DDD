@@ -9,9 +9,9 @@ namespace Vendas.Presentation.Web.Controllers
 {
     public class UsuarioController : Controller
     {
-        private readonly UsuarioApplication _usuarioApplication;
+        private readonly PessoaoUsuarioApplication _usuarioApplication;
 
-        public UsuarioController(UsuarioApplication usuarioApplication)            
+        public UsuarioController(PessoaoUsuarioApplication usuarioApplication)            
         {
             _usuarioApplication = usuarioApplication;
         }
@@ -69,7 +69,7 @@ namespace Vendas.Presentation.Web.Controllers
             try
             {
                 // TODO: Add insert logic here
-                var _usuarioDomain = Mapper.Map<UsuarioViewModel, Usuario>(obj);
+                var _usuarioDomain = Mapper.Map<UsuarioViewModel, PessoaUsuario>(obj);
                 _usuarioApplication.Add(_usuarioDomain);
 
                 return RedirectToAction("Index");

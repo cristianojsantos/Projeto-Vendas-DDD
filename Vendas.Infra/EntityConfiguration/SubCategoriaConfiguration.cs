@@ -24,11 +24,11 @@ namespace Vendas.Infra.EntityConfiguration
 
             HasRequired(p => p.UsuarioCadastro)
                 .WithMany()
-                .HasForeignKey(p => p.IdUsuarioCadastro);
+                .HasForeignKey(p => new { p.IdPessoaUsuarioCadastro, p.IdLojaCadastro });
 
             HasOptional(p => p.UsuarioAlteracao)
                 .WithMany(p => p.SubCategoria)
-                .HasForeignKey(p => p.IdUsuarioAlteracao);
+                .HasForeignKey(p => new { p.IdPessoaUsuarioAlteracao, p.IdLojaAlteracao });
         }
     }
 }
