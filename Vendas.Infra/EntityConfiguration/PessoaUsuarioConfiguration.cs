@@ -7,7 +7,7 @@ namespace Vendas.Infra.EntityConfiguration
     {
         public PessoaUsuarioConfiguration()
         {
-            HasKey(p => p.IdPessoaUsuario);
+            HasKey(p => new { p.IdPessoaUsuario , p.IdLoja});
 
             Property(p => p.NomeUsuario)
                 .IsRequired()

@@ -7,7 +7,7 @@ namespace Vendas.Infra.EntityConfiguration
     {
         public PerfilUsuarioConfiguration()
         {
-            HasKey(p => new { p.IdPerfil, p.IdPessoaUsuario });
+            HasKey(p => new { p.IdPerfil, p.IdPessoaUsuario, p.IdLoja });
 
             HasRequired(p => p.Perfil)
                 .WithMany()
@@ -15,7 +15,7 @@ namespace Vendas.Infra.EntityConfiguration
 
             HasRequired(p => p.Usuario)
                 .WithMany()
-                .HasForeignKey(p => p.IdPessoaUsuario);
+                .HasForeignKey(p => new { p.IdPessoaUsuario, p.IdLoja });
         }
     }
 }

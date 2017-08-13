@@ -13,9 +13,6 @@ namespace Vendas.Infra.EntityConfiguration
                 .IsRequired()
                 .HasMaxLength(60);
 
-            Property(p => p.IdPessoaUsuarioCadastro)
-                .IsRequired();
-
             Property(p => p.DataCadastro)
                 .IsRequired();
             
