@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using Vendas.Infra.Context;
 using Vendas.Infra.Repository.Interface;
 
 namespace Vendas.Infra.Repository
 {
-    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
+    public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
         protected VendaContext db = new VendaContext();
 
@@ -42,7 +44,7 @@ namespace Vendas.Infra.Repository
 
         public void Update(TEntity obj)
         {
-            db.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            db.Entry(obj).State = EntityState.Modified;
             db.SaveChanges();
         }
     }

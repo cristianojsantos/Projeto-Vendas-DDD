@@ -1,30 +1,27 @@
 ﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
     public class CategoriaViewModel
     {
-        [Key]
+        public CategoriaViewModel()
+        {
+            SubCategoria = new List<SubCategoriaViewModel>();
+        }
+
         public int IdCategoria { get; set; }
-
-        [DisplayName("Descrição da Categoria")]
-        [MaxLength(30)]
-        [MinLength(3)]
-        [Required]
         public string DescricaoCategoria { get; set; }
-
-        public int IdUsuarioCadastro { get; set; }
-
-        [DisplayName("Data Cadastro")]
+        public int IdPessoaUsuarioCadastro { get; set; }
+        public int IdLojaCadastro { get; set; }
         public DateTime DataCadastro { get; set; }
-        public int IdUsuarioAlteracao { get; set; }
+        public int? IdPessoaUsuarioAlteracao { get; set; }
+        public int? IdLojaAlteracao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
 
-        [DisplayName("Data Cadastro")]
-        public DateTime DataAlteracao { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioAlteracao { get; set; }
 
-        public virtual UsuarioViewModel UsuarioCadastro { get; set; }
-        public virtual UsuarioViewModel UsuarioAlteracao { get; set; }
+        public virtual ICollection<SubCategoriaViewModel> SubCategoria { get; set; }
     }
 }
