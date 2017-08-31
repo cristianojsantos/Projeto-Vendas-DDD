@@ -40,7 +40,7 @@
         <div class="login-box-body">
             <p class="login-box-msg">Efetue Login para iniciar sua sessão</p>
 
-            @using (Html.BeginForm("Index", "Venda", FormMethod.Post))
+            @using (Html.BeginForm("Index", "Principal", FormMethod.Post))
             {
                 <div class="form-group has-feedback">
                     @Html.TextBoxFor(p => p.LoginUsuario, new { @class = "form-control", placeholder = Html.DisplayNameFor(p => p.LoginUsuario) })

@@ -93,8 +93,48 @@
                                 <li>@Html.ActionLink("Sub-Categoria", "Index", "SubCategoria")
                                 <li>@Html.ActionLink("Produto", "Index", "Produto")</li>
                             </ul>
+
+                            <ul class="treeview-menu">
+                                <li class="treeview">
+                                    <a href="#">
+                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i><span>Pessoas</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+
+                                    <ul class="treeview-menu">
+                                        <li>@Html.ActionLink("Clientes", "Index", "Categoria")</li>
+                                        <li>@Html.ActionLink("Fornecedores", "Index", "Categoria")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i><span>Compras</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="treeview-menu">
+                                
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book fa-fw"></i><span>Financeiro</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="treeview-menu"></ul>
                         </li>
                     </ul>
+
+                    
                 </section>
             </aside>
 
