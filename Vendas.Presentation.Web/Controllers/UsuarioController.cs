@@ -31,7 +31,7 @@ namespace Vendas.Presentation.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken()]
-        public ActionResult Login(UsuarioViewModel obj)
+        public ActionResult Login(PessoaUsuarioViewModel obj)
         {
             try
             {
@@ -64,12 +64,12 @@ namespace Vendas.Presentation.Web.Controllers
 
         // POST: Usuario/Create
         [HttpPost]
-        public ActionResult Create(UsuarioViewModel obj)
+        public ActionResult Create(PessoaUsuarioViewModel obj)
         {
             try
             {
                 // TODO: Add insert logic here
-                var _usuarioDomain = Mapper.Map<UsuarioViewModel, PessoaUsuario>(obj);
+                var _usuarioDomain = Mapper.Map<PessoaUsuarioViewModel, PessoaUsuario>(obj);
                 _usuarioApplication.Add(_usuarioDomain);
 
                 return RedirectToAction("Index");
@@ -86,7 +86,7 @@ namespace Vendas.Presentation.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult NewUser(UsuarioViewModel obj)
+        public ActionResult NewUser(PessoaUsuarioViewModel obj)
         {
             try
             {

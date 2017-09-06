@@ -1,13 +1,27 @@
-﻿using System.Web.Mvc;
+﻿using AutoMapper;
+using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
+using Vendas.Application.Interface;
+using Vendas.Domain;
+using Vendas.Presentation.Web.ViewModels;
 
 namespace Vendas.Presentation.Web.Controllers
 {
     public class VendaController : Controller
     {
+        private readonly IVendaApplication _application;
+
+        public VendaController(IVendaApplication application)
+        {
+            _application = application;
+        }
+
         // GET: Venda
         public ActionResult Index()
         {
-            return View();
+            var _vendasViewModel = Mapper.Map<IEnumerable<Venda>, IEnumerable<VendaViewModel>>(_application.GetAll());
+            return View(_vendasViewModel);
         }
 
 

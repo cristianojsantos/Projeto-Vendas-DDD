@@ -14,6 +14,6 @@ namespace Vendas.Presentation.Web.ViewModels
         public int IdUsuario { get; set; }
 
         public virtual PerfilViewModel Perfil { get; set; }
-        public virtual UsuarioViewModel Usuario { get; set; }
+        public virtual PessoaUsuarioViewModel Usuario { get; set; }
     }
 }

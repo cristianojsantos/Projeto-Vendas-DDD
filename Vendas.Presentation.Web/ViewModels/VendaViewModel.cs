@@ -1,31 +1,23 @@
 ﻿using System;
-using System.ComponentModel;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
     public class VendaViewModel
     {
         [Key]
-        [Column(Order = 1)]
         public int IdVenda { get; set; }
-
         [Key]
-        [Column(Order = 2)]
         public int IdLoja { get; set; }
-
         [Key]
-        [Column(Order = 3)]
-        public int IdVendedor { get; set; }
-
+        public int IdPessoa { get; set; }
         [Key]
-        [Column(Order = 4)]
-        public int IdCliente { get; set; }
-
-        [Required]
-        [DisplayName("Data da Venda")]
-        [DataType(DataType.Date)]
+        public int IdPessoaUsuario { get; set; }
         public DateTime DataVenda { get; set; }
+
+        public virtual PessoaUsuarioViewModel PessoaUsuario { get; set; }
+
+        public virtual PessoaViewModel Pessoa { get; set; }
     }
 }

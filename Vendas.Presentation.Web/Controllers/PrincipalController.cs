@@ -1,9 +1,18 @@
 ﻿using System.Web.Mvc;
+using Vendas.Application.Interface;
 
 namespace Vendas.Presentation.Web.Controllers
 {
     public class PrincipalController : Controller
     {
+        private readonly IVendaApplication _vendaApplication;
+        private readonly IVendaItemApplication _vendaItemApplication;
+
+        public PrincipalController(IVendaApplication _vendaApplication, IVendaItemApplication _vendaItemApplication)
+        {
+
+        }
+
         // GET: Principal
         public ActionResult Index()
         {

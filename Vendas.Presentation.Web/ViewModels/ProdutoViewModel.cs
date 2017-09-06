@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -36,10 +37,9 @@ namespace Vendas.Presentation.Web.ViewModels
         [DisplayName("Data Cadastro")]
         public DateTime DataAlteracao { get; set; }
 
-        public virtual UsuarioViewModel UsuarioCadastro { get; set; }
-        public virtual UsuarioViewModel UsuarioAlteracao { get; set; }
-
-        public virtual SubCategoriaViewModel SubCategoria { get; set; }
+        public virtual List<PessoaUsuarioViewModel> UsuarioCadastro { get; set; }
+        public virtual List<PessoaUsuarioViewModel> UsuarioAlteracao { get; set; }
+        public virtual List<SubCategoriaViewModel> SubCategoria { get; set; }
 
     }
 }

@@ -3,6 +3,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Http;
+using Vendas.Presentation.Web.AutoMapper;
 
 namespace Vendas.Presentation.Web
 {
@@ -12,6 +13,7 @@ namespace Vendas.Presentation.Web
         {
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
+            AutoMapperConfig.RegisterMappings();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
         }

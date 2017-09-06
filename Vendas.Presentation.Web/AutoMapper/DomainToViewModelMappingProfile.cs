@@ -9,7 +9,7 @@ namespace Vendas.Presentation.Web.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<Categoria, CategoriaViewModel>();
-            CreateMap<PessoaFisica, ClienteViewModel>();
+            CreateMap<PessoaFisica, PessoaFisicaViewModel>();
             CreateMap<Loja, LojaViewModel>();
             CreateMap<Produto, ProdutoViewModel>();
             CreateMap<SubCategoria, SubCategoriaViewModel>();

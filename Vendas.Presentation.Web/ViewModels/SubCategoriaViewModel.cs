@@ -30,8 +30,8 @@ namespace Vendas.Presentation.Web.ViewModels
         [DisplayName("Data Cadastro")]
         public DateTime DataAlteracao { get; set; }
 
-        public virtual UsuarioViewModel UsuarioCadastro { get; set; }
-        public virtual UsuarioViewModel UsuarioAlteracao { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }
+        public virtual PessoaUsuarioViewModel UsuarioAlteracao { get; set; }
 
         public virtual CategoriaViewModel Categoria { get; set; }
     }
