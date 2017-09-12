@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vendas.Presentation.Web.ViewModels
@@ -14,6 +14,8 @@ namespace Vendas.Presentation.Web.ViewModels
         public int IdPessoa { get; set; }
         [Key]
         public int IdPessoaUsuario { get; set; }
+
+        [DisplayName("Data da Venda")]
         public DateTime DataVenda { get; set; }
 
         public virtual PessoaUsuarioViewModel PessoaUsuario { get; set; }

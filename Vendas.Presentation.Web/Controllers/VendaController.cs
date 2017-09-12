@@ -24,8 +24,6 @@ namespace Vendas.Presentation.Web.Controllers
             return View(_vendasViewModel);
         }
 
-
-
         // GET: Venda/Details/5
         public ActionResult Details(int id)
         {

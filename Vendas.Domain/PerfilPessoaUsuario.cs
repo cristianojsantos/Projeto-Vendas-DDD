@@ -7,6 +7,6 @@
         public int IdLoja { get; set; }
 
         public virtual Perfil Perfil { get; set; }
-        public virtual PessoaUsuario Usuario { get; set; }
+        public virtual PessoaUsuario Usuario { get; set; }        
     }
 }
