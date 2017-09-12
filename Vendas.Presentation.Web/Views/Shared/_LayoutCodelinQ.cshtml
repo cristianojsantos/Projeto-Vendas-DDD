@@ -37,109 +37,115 @@
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
             @using (Html.BeginForm())
-        {
-        <header class="main-header">
-            <a href="#" class="logo">
-                <span class="logo-mini"><b>L</b>inQ Sistemas</span>
-                <span class="logo-lg"><b>Admin</b> LinQ</span>
-            </a>
+            {
+                <header class="main-header">
+                    <a href="#" class="logo">
+                        <span class="logo-mini"><b>L</b>inQ Sistemas</span>
+                        <span class="logo-lg"><b>Admin</b> LinQ</span>
+                    </a>
 
-            <nav class="navbar navbar-static-top">
-                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown messages-menu"></li>
-                        <li class="dropdown notifications-menu"></li>
-                        <li class="dropdown tasks-menu"></li>
-                        <li class="dropdown user user-menu"></li>
-                        <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <aside class="main-sidebar">
-            <section class="sidebar">
-                @*
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img src="~/Content/img/Eu.jpg" class="img-circle" alt="User Image">
-                        </div>
-                        <br />
-                        <div class="pull-left info">
-                            <p>LinQ Sistemas</p>
-                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                        </div>
-                    </div>
-                *@
-
-                <ul class="sidebar-menu">
-                    @*<li class="header">Principal</li>*@
-                    <li class="active treeview">
-                        <a href="#">
-                            <i class="fa fa-edit"></i><span>Cadastros</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
+                    <nav class="navbar navbar-static-top">
+                        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle navigation</span>
                         </a>
 
-                        <ul class="treeview-menu">
-                            <li>@Html.ActionLink("Categoria", "Index", "Categoria")</li>
-                            <li>@Html.ActionLink("Sub-Categoria", "Index", "SubCategoria")
-                            <li>@Html.ActionLink("Produto", "Index", "Produto")</li>
-                        </ul>
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown messages-menu"></li>
+                                <li class="dropdown notifications-menu"></li>
+                                <li class="dropdown tasks-menu"></li>
+                                <li class="dropdown user user-menu"></li>
+                                <li>
+                                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
 
-                        <ul class="treeview-menu">
-                            <li class="treeview">
+                <aside class="main-sidebar">
+                    <section class="sidebar">
+                        @*
+                            <div class="user-panel">
+                                <div class="pull-left image">
+                                    <img src="~/Content/img/Eu.jpg" class="img-circle" alt="User Image">
+                                </div>
+                                <br />
+                                <div class="pull-left info">
+                                    <p>LinQ Sistemas</p>
+                                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                                </div>
+                            </div>
+                        *@
+
+                        <ul class="sidebar-menu">
+                            @*<li class="header">Principal</li>*@
+                            <li class="active treeview">
                                 <a href="#">
-                                    <i class="fa fa-user fa-fw" aria-hidden="true"></i><span>Pessoas</span>
+                                    <i class="fa fa-edit"></i><span>Cadastros</span>
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
                                     </span>
                                 </a>
 
                                 <ul class="treeview-menu">
-                                    <li>@Html.ActionLink("Clientes", "Index", "Categoria")</li>
-                                    <li>@Html.ActionLink("Fornecedores", "Index", "Categoria")</li>
+                                    <li>@Html.ActionLink("Categoria", "Index", "Categoria")</li>
+                                    <li>@Html.ActionLink("Sub-Categoria", "Index", "SubCategoria")
+                                    <li>@Html.ActionLink("Produto", "Index", "Produto")</li>
+                                </ul>
+
+                                <ul class="treeview-menu">
+                                    <li class="treeview">
+                                        <a href="#">
+                                            <i class="fa fa-user fa-fw" aria-hidden="true"></i><span>Pessoas</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+
+                                        <ul class="treeview-menu">
+                                            <li>@Html.ActionLink("Clientes", "Index", "Categoria")</li>
+                                            <li>@Html.ActionLink("Fornecedores", "Index", "Categoria")</li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart"></i><span>Compras</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+
+                                <ul class="treeview-menu"></ul>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-book fa-fw"></i><span>Financeiro</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+
+                                <ul class="treeview-menu"></ul>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-shopping-cart"></i><span>Compras</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-
-                        <ul class="treeview-menu"></ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-book fa-fw"></i><span>Financeiro</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-
-                        <ul class="treeview-menu"></ul>
-                    </li>
-                </ul>
 
 
-            </section>
-        </aside>
+                    </section>
+                </aside>
 
-        <div class="content-wrapper">
-            @RenderBody()
-        </div>
-        }
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                <footer class="main-footer">
+                    <div class="pull-right hidden-xs">
+                        <b>Version</b> 2.3.8
+                    </div>
+                    <strong>Copyright &copy; @DateTime.Now.Year <a href="http://www.codelinq.com.br">CodelinQ Sistemas</a>.</strong> Todos os direitos reservados
+                </footer>
+            }
 
             <div class="control-sidebar-bg"></div>
         </div>
@@ -149,7 +155,7 @@
         <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <script>
-        $.widget.bridge('uibutton', $.ui.button);
+            $.widget.bridge('uibutton', $.ui.button);
         </script>
         <!-- Bootstrap 3.3.6 -->
         <script src="~/Scripts/bootstrap.min.js"></script>
