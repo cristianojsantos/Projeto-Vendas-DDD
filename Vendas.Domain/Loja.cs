@@ -20,8 +20,8 @@ namespace Vendas.Domain
         public string Cidade { get; set; }
         public string Estado { get; set; }
 
-        public int IdPessoaUsuarioCadastro { get; set; }
-        public int IdLojaCadastro { get; set; }
+        public int? IdPessoaUsuarioCadastro { get; set; }
+        public int? IdLojaCadastro { get; set; }
         public DateTime DataCadastro { get; set; }
         public int? IdPessoaUsuarioAlteracao { get; set; }
         public int? IdLojaAlteracao { get; set; }

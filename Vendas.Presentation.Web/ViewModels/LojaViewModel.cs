@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,6 +7,11 @@ namespace Vendas.Presentation.Web.ViewModels
 {
     public class LojaViewModel
     {
+        public LojaViewModel()
+        {
+
+        }
+
         [Key]
         public int IdLoja { get; set; }
 
@@ -61,5 +67,7 @@ namespace Vendas.Presentation.Web.ViewModels
 
         public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }
         public virtual PessoaUsuarioViewModel UsuarioAlteracao { get; set; }
+
+        public virtual ICollection<PessoaUsuarioViewModel> PessoaUsuarioViewModel { get; set; }
     }
 }

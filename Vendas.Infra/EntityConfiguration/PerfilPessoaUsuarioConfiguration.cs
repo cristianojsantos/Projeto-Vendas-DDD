@@ -3,9 +3,9 @@ using Vendas.Domain;
 
 namespace Vendas.Infra.EntityConfiguration
 {
-    public class PerfilUsuarioConfiguration: EntityTypeConfiguration<PerfilPessoaUsuario>
+    public class PerfilPessoaUsuarioConfiguration: EntityTypeConfiguration<PerfilPessoaUsuario>
     {
-        public PerfilUsuarioConfiguration()
+        public PerfilPessoaUsuarioConfiguration()
         {
             HasKey(p => new { p.IdPerfil, p.IdPessoaUsuario, p.IdLoja });
 

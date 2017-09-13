@@ -28,6 +28,7 @@ namespace Vendas.Presentation.Web.ViewModels
         public int IdUsuarioAlteracao { get; set; }
 
         [DisplayName("Data Cadastro")]
+        [Required]
         public DateTime DataAlteracao { get; set; }
 
         public virtual PessoaUsuarioViewModel UsuarioCadastro { get; set; }

@@ -45,13 +45,15 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.DataAlteracao)
                 .IsOptional();
 
-            HasRequired(p => p.UsuarioCadastro)
-                .WithMany()
-                .HasForeignKey(p => new { p.IdPessoaUsuarioCadastro, p.IdLojaCadastro });
+            HasOptional(p => p.UsuarioCadastro)
+                .WithMany(p => p.Lojas)
+                .HasForeignKey(p => new { p.IdPessoaUsuarioCadastro, p.IdLojaCadastro })
+                .WillCascadeOnDelete();
 
             HasOptional(p => p.UsuarioAlteracao)
                 .WithMany(p => p.Lojas)
-                .HasForeignKey(p => new { p.IdPessoaUsuarioAlteracao, p.IdLojaAlteracao });
+                .HasForeignKey(p => new { p.IdPessoaUsuarioAlteracao, p.IdLojaAlteracao })
+                .WillCascadeOnDelete();
         }
     }
 }

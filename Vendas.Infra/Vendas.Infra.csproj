@@ -46,7 +46,7 @@
     <Compile Include="EntityConfiguration\PessoaJuridicaConfiguration.cs" />
     <Compile Include="EntityConfiguration\PessoaFisicaConfiguration.cs" />
     <Compile Include="EntityConfiguration\LojaConfiguration.cs" />
-    <Compile Include="EntityConfiguration\PerfilUsuarioConfiguration.cs" />
+    <Compile Include="EntityConfiguration\PerfilPessoaUsuarioConfiguration.cs" />
     <Compile Include="EntityConfiguration\PerfilConfiguration.cs" />
     <Compile Include="EntityConfiguration\PessoaConfiguration.cs" />
     <Compile Include="EntityConfiguration\ProdutoConfiguration.cs" />

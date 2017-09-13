@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
@@ -12,7 +13,10 @@ namespace Vendas.Presentation.Web.ViewModels
             PessoaJuridica = new List<PessoaJuridicaViewModel>();
         }
 
+        [Key]
         public int IdPessoa { get; set; }
+
+        [Display(Name = "Data de Cadastro")]
         public DateTime DataCadastro { get; set; }
 
         public virtual ICollection<PessoaUsuarioViewModel> PessoaUsuario { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -6,6 +7,11 @@ namespace Vendas.Presentation.Web.ViewModels
 {
     public class VendaItemViewModel
     {
+        public VendaItemViewModel()
+        {
+            ProdutoViewModel = new List<ProdutoViewModel>();
+        }
+
         [Key]
         [Column(Order = 1)]
         public int SequenciaItem { get; set; }
@@ -36,5 +42,6 @@ namespace Vendas.Presentation.Web.ViewModels
         public decimal ValorVenda { get; set; }
 
         public virtual VendaViewModel Venda { get; set; }
+        public virtual ICollection<ProdutoViewModel> ProdutoViewModel { get; set; }
     }
 }

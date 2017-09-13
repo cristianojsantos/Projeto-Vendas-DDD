@@ -1,10 +1,9 @@
-﻿@model IEnumerable<Vendas.Presentation.Web.ViewModels.CategoriaViewModel>
+﻿@model Vendas.Presentation.Web.ViewModels.CategoriaViewModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_LayoutCodelinQ.cshtml";
 }
-
 <body class="hold-transition skin-blue sidebar-mini" style="height:800px">
     <section class="content-header">
         <h1>
@@ -22,7 +21,7 @@
 
             <div class="box-header with-border">
                 <h3 class="box-title">
-                    Lista de Categorias
+                    Inclusão de Categoria
                 </h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -34,38 +33,79 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <p>
-                                @Html.ActionLink("Nova Categoria", "Create")
-                            </p>
-                            <table class="table">
-                                <tr>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.DescricaoCategoria)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.DataAlteracao)
-                                    </th>
-                                    <th></th>
-                                </tr>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
-                                @foreach (var item in Model)
-                                {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.DescricaoCategoria)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.DataAlteracao)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.IdCategoria }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.IdCategoria }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.IdCategoria })
-                                    </td>
-                                </tr>
-                                }
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DescricaoCategoria, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.DescricaoCategoria, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DescricaoCategoria, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-                            </table>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.IdPessoaUsuarioCadastro, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.IdPessoaUsuarioCadastro, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.IdPessoaUsuarioCadastro, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.IdLojaCadastro, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.IdLojaCadastro, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.IdLojaCadastro, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DataCadastro, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.DataCadastro, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DataCadastro, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.IdPessoaUsuarioAlteracao, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.IdPessoaUsuarioAlteracao, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.IdPessoaUsuarioAlteracao, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.IdLojaAlteracao, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.IdLojaAlteracao, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.IdLojaAlteracao, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DataAlteracao, htmlAttributes: new { @class = "control-label col-md-5" })
+                                        <div class="col-md-7">
+                                            @Html.EditorFor(model => model.DataAlteracao, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DataAlteracao, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-12">
+                                            <input type="submit" value="Incluir" class="btn btn-default" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                            <div>
+                                @Html.ActionLink("Retornar a Lista", "Index")
+                            </div>
                         </div>
                     </div>
                 </div>

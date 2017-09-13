@@ -1,10 +1,16 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vendas.Presentation.Web.ViewModels
 {
     public class PerfilViewModel
     {
+        public PerfilViewModel()
+        {
+            PerfilPessoaUsuarioViewModel = new List<PerfilPessoaUsuarioViewModel>();
+        }
+
         [Key]
         public int IdPefil { get; set; }
 
@@ -13,5 +19,7 @@ namespace Vendas.Presentation.Web.ViewModels
         [MinLength(3)]
         [Required]
         public string DescricaoPerfil { get; set; }
+
+        public virtual ICollection<PerfilPessoaUsuarioViewModel> PerfilPessoaUsuarioViewModel { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Vendas.Presentation.Web.Controllers
         public ActionResult Index()
         {
             var _categoriaViewModel = Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaViewModel>>(_categoriaApplication.GetAll());
-            return View();
+            return View(_categoriaViewModel);
         }
 
         // GET: Categoria/Details/5

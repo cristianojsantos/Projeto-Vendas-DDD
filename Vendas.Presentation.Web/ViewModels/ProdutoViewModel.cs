@@ -7,6 +7,11 @@ namespace Vendas.Presentation.Web.ViewModels
 {
     public class ProdutoViewModel
     {
+        public ProdutoViewModel()
+        {
+
+        }
+
         [Key]
         public int IdProduto { get; set; }
 
@@ -31,15 +36,16 @@ namespace Vendas.Presentation.Web.ViewModels
         public int IdUsuarioCadastro { get; set; }
 
         [DisplayName("Data Cadastro")]
+        [Required]
         public DateTime DataCadastro { get; set; }
         public int IdUsuarioAlteracao { get; set; }
 
         [DisplayName("Data Cadastro")]
         public DateTime DataAlteracao { get; set; }
 
-        public virtual List<PessoaUsuarioViewModel> UsuarioCadastro { get; set; }
-        public virtual List<PessoaUsuarioViewModel> UsuarioAlteracao { get; set; }
-        public virtual List<SubCategoriaViewModel> SubCategoria { get; set; }
-
+        public virtual ICollection<PessoaUsuarioViewModel> PessoaUsuarioCadastroViewModel { get; set; }
+        public virtual ICollection<PessoaUsuarioViewModel> PessoaUsuarioUsuarioAlteracaoViewModel { get; set; }
+        public virtual ICollection<SubCategoriaViewModel> SubCategoriaViewModel { get; set; }
+        public virtual ICollection<VendaItemViewModel> VendaItemViewModel { get; set; }
     }
 }

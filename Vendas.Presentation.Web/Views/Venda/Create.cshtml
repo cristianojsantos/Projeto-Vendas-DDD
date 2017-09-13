@@ -1,14 +1,13 @@
-﻿@model IEnumerable<Vendas.Presentation.Web.ViewModels.CategoriaViewModel>
+﻿@model Vendas.Presentation.Web.ViewModels.VendaViewModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_LayoutCodelinQ.cshtml";
 }
-
 <body class="hold-transition skin-blue sidebar-mini" style="height:800px">
     <section class="content-header">
         <h1>
-            Categoria
+            Venda
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -22,7 +21,7 @@
 
             <div class="box-header with-border">
                 <h3 class="box-title">
-                    Lista de Categorias
+                    Inclusão de Venda
                 </h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -34,40 +33,55 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <p>
-                                @Html.ActionLink("Nova Categoria", "Create")
-                            </p>
-                            <table class="table">
-                                <tr>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.DescricaoCategoria)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.DataAlteracao)
-                                    </th>
-                                    <th></th>
-                                </tr>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
 
-                                @foreach (var item in Model)
-                                {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.DescricaoCategoria)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.DataAlteracao)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.IdCategoria }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.IdCategoria }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.IdCategoria })
-                                    </td>
-                                </tr>
-                                }
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DataVenda, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.DataVenda, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DataVenda, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
 
-                            </table>
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Pessoa.PessoaFisica.FirstOrDefault().Cpf, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-6">
+                                            @Html.EditorFor(model => model.IdPessoa, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.IdPessoa, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*<div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Gerar Venda" class="btn btn-default" />
+                                        </div>
+                                    </div>
+                                        *@
+                                </div>
+                            }
+
+                            @*
+                            <div>
+                                @Html.ActionLink("Retornar a Lista", "Index")
+                            </div>
+                            *@
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title">
+                    Itens da Venda
+                </h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
                 </div>
             </div>
         </div>
