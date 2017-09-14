@@ -7,7 +7,6 @@ namespace Vendas.Domain
     {
         public Loja()
         {
-            Venda = new List<Venda>();
         }
 
         public int IdLoja { get; set; }
@@ -19,17 +18,5 @@ namespace Vendas.Domain
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-
-        public int? IdPessoaUsuarioCadastro { get; set; }
-        public int? IdLojaCadastro { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public int? IdPessoaUsuarioAlteracao { get; set; }
-        public int? IdLojaAlteracao { get; set; }
-        public DateTime? DataAlteracao { get; set; }
-
-        public virtual PessoaUsuario UsuarioCadastro { get; set; }
-        public virtual PessoaUsuario UsuarioAlteracao { get; set; }
-
-        public virtual ICollection<Venda> Venda { get; set; }
     }
 }

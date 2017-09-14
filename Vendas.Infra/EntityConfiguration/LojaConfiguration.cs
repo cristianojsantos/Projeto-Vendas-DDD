@@ -38,22 +38,6 @@ namespace Vendas.Infra.EntityConfiguration
             Property(p => p.Estado)
                 .IsRequired()
                 .HasMaxLength(30);
-                        
-            Property(p => p.DataCadastro)
-                .IsRequired();
-            
-            Property(p => p.DataAlteracao)
-                .IsOptional();
-
-            HasOptional(p => p.UsuarioCadastro)
-                .WithMany(p => p.Lojas)
-                .HasForeignKey(p => new { p.IdPessoaUsuarioCadastro, p.IdLojaCadastro })
-                .WillCascadeOnDelete();
-
-            HasOptional(p => p.UsuarioAlteracao)
-                .WithMany(p => p.Lojas)
-                .HasForeignKey(p => new { p.IdPessoaUsuarioAlteracao, p.IdLojaAlteracao })
-                .WillCascadeOnDelete();
         }
     }
 }

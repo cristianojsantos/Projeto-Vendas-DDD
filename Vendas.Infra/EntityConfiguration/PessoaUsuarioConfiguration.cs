@@ -25,7 +25,7 @@ namespace Vendas.Infra.EntityConfiguration
                 .WithMany()
                 .HasForeignKey(p => p.IdPessoaUsuario);
 
-            HasRequired(p => p.Lojas)
+            HasRequired(p => p.Loja)
                 .WithMany()
                 .HasForeignKey(p => p.IdLoja);
         }
